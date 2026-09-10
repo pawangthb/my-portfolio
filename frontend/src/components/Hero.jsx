@@ -119,7 +119,7 @@ export default function Hero() {
                 {/* Image */}
                <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-primary/20 glass bg-dark">
                  <img
-                    src="/src/components/For_Pf.jpeg"
+                    src="/For_Pf.jpeg"
                     alt="Pawan Gupta"
                     className="w-full h-full object-cover object-top"
                     onError={(e) => {
