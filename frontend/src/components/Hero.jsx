@@ -1,25 +1,25 @@
 import { motion } from "framer-motion"
 import { TypeAnimation } from "react-type-animation"
 import { Link } from "react-scroll"
-import { FiGithub, FiLinkedin, FiTwitter, FiArrowDown } from "react-icons/fi"
+import { FiGithub, FiLinkedin, FiArrowDown, FiDownload } from "react-icons/fi"
+import { SiLeetcode } from "react-icons/si"
 
 const socials = [
   { icon: <FiGithub />,   href: "https://github.com/pawangthb" },
   { icon: <FiLinkedin />, href: "https://www.linkedin.com/in/pawan-gupta-739914264" },
-  { icon: <FiTwitter />,  href: "#" },
+  { icon: <SiLeetcode  />,  href: "https://leetcode.com/u/pg19062004/" },
 ]
 
 export default function Hero() {
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated background orbs */}
+       
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] animate-pulse-slow" />
         <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-purple-500/10 rounded-full blur-[100px] animate-pulse-slow" style={{animationDelay:"2s"}} />
         <div className="absolute top-1/2 left-1/2 w-[300px] h-[300px] bg-accent/5 rounded-full blur-[80px] animate-float" />
       </div>
-
-      {/* Grid pattern */}
+ 
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.02)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_40%,transparent_100%)]" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">
@@ -27,8 +27,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          {/* Badge */}
+        > 
           <div className="flex justify-center mb-8">
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
@@ -40,11 +39,9 @@ export default function Hero() {
               Available for opportunities
             </motion.div>
           </div>
-
-          {/* Main layout — text left, image right */}
+ 
           <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
-
-            {/* LEFT — Text */}
+ 
             <div className="flex-1 text-center md:text-left">
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold leading-tight mb-6">
                 Hi, I'm
@@ -69,8 +66,7 @@ export default function Hero() {
                 I build scalable, performant web applications with clean code and intuitive UX.
                 Passionate about turning complex problems into elegant solutions.
               </p>
-
-              {/* CTA buttons */}
+ 
               <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 mb-10">
                 <Link to="projects" smooth duration={600} offset={-70}>
                   <motion.button
@@ -88,10 +84,19 @@ export default function Hero() {
                   >
                     Get In Touch
                   </motion.button>
-                </Link>
+                </Link> 
+                <a href="/Pawan_Resume.pdf" download="Pawan_Gupta_Resume.pdf">
+                  <motion.button
+                    whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(39,131,222,0.2)" }}
+                    whileTap={{ scale: 0.97 }}
+                    className="px-8 py-4 glass text-white font-semibold rounded-full text-base hover:border-primary/50 transition-all flex items-center gap-2"
+                  >
+                    <FiDownload className="text-primary" />
+                    Download CV
+                  </motion.button>
+                </a>
               </div>
-
-              {/* Socials */}
+ 
               <div className="flex items-center justify-center md:justify-start gap-4">
                 {socials.map((s, i) => (
                   <motion.a key={i} href={s.href} target="_blank" rel="noreferrer"
@@ -103,8 +108,7 @@ export default function Hero() {
                 ))}
               </div>
             </div>
-
-            {/* RIGHT — Profile Image */}
+ 
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -112,18 +116,17 @@ export default function Hero() {
               className="flex-shrink-0"
             >
               <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
-                {/* Glow ring */}
+                 
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/40 to-purple-500/40 blur-2xl animate-pulse-slow" />
-                {/* Rotating border */}
+                 
                 <div className="absolute inset-0 rounded-full border-2 border-primary/30 animate-spin" style={{ animationDuration: "8s" }} />
-                {/* Image */}
+                 
                <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-primary/20 glass bg-dark">
                  <img
                     src="/For_Pf.jpeg"
                     alt="Pawan Gupta"
                     className="w-full h-full object-cover object-top"
                     onError={(e) => {
-                      // Fallback avatar if image not found
                       e.target.style.display = 'none';
                       e.target.parentNode.innerHTML = `
                         <div class="w-full h-full flex items-center justify-center text-6xl font-bold gradient-text">
@@ -138,8 +141,7 @@ export default function Hero() {
 
           </div>
         </motion.div>
-
-        {/* Scroll indicator */}
+ 
         <motion.div
           animate={{ y: [0, 10, 0] }} transition={{ repeat: Infinity, duration: 2 }}
           className="absolute bottom-10 left-1/2 -translate-x-1/2 text-gray-600"

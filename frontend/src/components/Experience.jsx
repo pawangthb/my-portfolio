@@ -40,7 +40,7 @@ const edu = [
     degree: "B.Tech — Computer Science & Engineering",
     org:    "NIET, Greater Noida",
     period: "2022 – 2026",
-    desc:   ["CGPA: 7.2 / 10", "Core CS, DSA, OS, DBMS, Networks"],
+    desc:   ["CGPA: 7.15 / 10", "Core CS, DSA, OS, DBMS, Networks"],
   },
   {
     degree: "Higher Secondary (Class XII)",

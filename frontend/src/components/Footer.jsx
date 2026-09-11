@@ -1,12 +1,13 @@
-import { motion } from "framer-motion"
-import { FiGithub, FiLinkedin, FiTwitter, FiHeart } from "react-icons/fi"
+import { motion } from "framer-motion" 
+import { FiGithub, FiLinkedin, FiHeart } from "react-icons/fi"
 import { Link } from "react-scroll"
+import { SiLeetcode } from "react-icons/si"
 
 const nav  = ["About","Skills","Projects","Experience","Contact"]
 const socs = [
   { icon: <FiGithub />,   href: "https://github.com/pawangthb" },
   { icon: <FiLinkedin />, href: "https://www.linkedin.com/in/pawan-gupta-739914264" },
-  { icon: <FiTwitter />,  href: "#" },
+   { icon: <SiLeetcode  />,  href: "https://leetcode.com/u/pg19062004/" },
 ]
 
 export default function Footer() {
