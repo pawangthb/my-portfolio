@@ -1,4 +1,4 @@
-# 🚀 Alphaxcoder Portfolio
+# 🚀 My-Portfolio
 A production-ready, full-stack portfolio with a React frontend and Express backend contact form.
 ## 🗂️ Directory Structure
 ```
