@@ -9,6 +9,15 @@ const contactRouter = require("./routes/contact")
 const app  = express()
 const PORT = process.env.PORT || 5000
 
+const https = require('https');
+setInterval(() => {
+  https.get('https://my-portfolio-9vom.onrender.com/health', (res) => {
+    console.log(`🏓 Keep-alive ping: ${res.statusCode}`);
+  }).on('error', (err) => {
+    console.error('Ping error:', err.message);
+  });
+}, 14 * 60 * 1000);
+
 // ── Security & middleware ──
 app.use(helmet())
 app.use(morgan("combined"))
